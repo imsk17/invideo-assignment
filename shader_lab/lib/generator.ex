@@ -6,7 +6,7 @@ defmodule ShaderLab.ShaderGenerator do
     body = %{
       "model" => "gpt-4o-mini",
       "messages" => [
-        %{"role" => "developer", "content" => "generate a simple shader program in glsl webgl2 using the description that user has provided with a singular main function. return only code. no comments, nothing"},
+        %{"role" => "developer", "content" => "generate a simple shader program in glsl webgl2 using the description that user has provided with a singular main function. return only code. no comments, nothing. do not use backticks for code formatting. just raw code"},
         %{
           "role" => "user",
           "content" => description
