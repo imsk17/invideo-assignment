@@ -1,21 +1,35 @@
 # ShaderLab
 
-**TODO: Add description**
+**A Rest API Service to Generate WebGL Shaders**
 
-## Installation
+## How to install 
+Make sure you have `elixir` and `mix` installed on your machine. 
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `shader_lab` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:shader_lab, "~> 0.1.0"}
-  ]
-end
+1. Clone the repository
+```bash
+git clone https://github.com/imsk17/invideo-assignment.git
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/shader_lab>.
+2. Change Directory
+```bash
+cd shader_lab
+```
 
+3. Install dependencies
+```bash
+mix deps.get
+```
+
+4. Start the server
+```bash
+mix run --no-halt
+```
+
+## How to use
+
+1. Send a POST request to `http://localhost:$PORT/shaders/generate` with the following payload
+```json
+{
+  "description": "A rotating cube with a gradient background",
+}
+```
